@@ -72,7 +72,7 @@ class CarDetailView(LoginRequiredMixin, generic.DetailView):
         elif action == "remove":
             car.drivers.remove(user)
 
-        return redirect("taxi:car-detail", pk=car.pk)
+        return redirect("taxi:car-detail", pk=pk)
 
 
 class CarCreateView(LoginRequiredMixin, generic.CreateView):
